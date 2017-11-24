@@ -1,0 +1,37 @@
+<div>
+  <div class="row">
+    <div class="col-md-12">
+      <label for="client"><h5>Whom?</h5></label>
+      <form [formGroup]="myForm">
+        <ng-multiselect-dropdown 
+          name="Client" 
+          [placeholder]="'Select Client'" 
+          [data]="clients" 
+          formControlName="client"
+          [disabled]="disabled" 
+          [settings]="dropdownSettings"
+          (onSelect)="onItemSelect($event)">
+        </ng-multiselect-dropdown>
+      </form>
+    </div>
+    <!--<div class="col-md-12">
+      <label for="options">Option</label>
+      <div class="checkbox">
+        <label>
+              <input type="checkbox" [checked]="ShowFilter" (change)="toogleShowFilter()"> Show Search filter
+          </label>
+      </div>
+      <div class="checkbox">
+        <label>
+              <input type="checkbox" [checked]="disabled" [(ngModel)]="disabled"> Disabled
+            </label>
+      </div>
+       <div class="checkbox">
+        <label>
+              <input type="checkbox" [checked]="limitSelection" [(ngModel)]="limitSelection" (change)="handleLimitSelection()"> Limit Selection to 2
+            </label>
+      </div> 
+    </div>-->
+  </div>
+
+</div>
